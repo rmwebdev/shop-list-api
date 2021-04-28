@@ -30,6 +30,9 @@ mongoose.connect(db, {
 app.use('/api/items', items);
 app.use('/api/users', users);
 app.use('/api/auth', auth);
+app.get('/', async (req, res) => {
+    res.send("Daftar belanja API SERVICE");
+  });
 
 // Serve static asset if in production
 if(process.env.NODE_ENV === 'production') {
